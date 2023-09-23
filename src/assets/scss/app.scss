@@ -2,6 +2,12 @@
 @use'../../../node_modules/bootstrap/scss/bootstrap.scss';
 
 /*Variables*/
-@use'../scss/partials/variables' as *;
+@use'../scss/partials/variables';
 
 /*Common*/
+
+body {
+    background-color: $dc_light;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Teko', sans-serif;
+}

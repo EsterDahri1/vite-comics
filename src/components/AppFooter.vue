@@ -4,4 +4,6 @@
 
 <template></template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use'../assets/scss/partials/variables' as *;
+</style>

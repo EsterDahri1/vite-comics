@@ -1,6 +1,7 @@
 <script>
 import AppLogo from './AppLogo.vue';
 export default {
+    name: 'AppHeader',
     data() {
         return {
             navBarItems: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'],
@@ -41,6 +42,7 @@ header {
     li {
         a {
             text-transform: uppercase;
+            color: $dc_dark;
 
             &.active {
                 color: $dc_primary;
@@ -48,6 +50,7 @@ header {
         }
 
         & a.active {
+            color: $dc_primary;
             border-bottom: solid 5px $dc_primary;
         }
     }

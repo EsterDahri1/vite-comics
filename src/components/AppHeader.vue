@@ -1,7 +1,55 @@
 <script>
+import AppLogo from './AppLogo.vue';
+export default {
+    data() {
+        return {
+            navBarItems: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'],
 
+            activeLink: 0
+        }
+    },
+
+    components: {
+        AppLogo
+    }
+}
 </script>
 
-<template></template>
+<template>
+    <header class="mt-1 d-flex justify-content-between align-items-center">
+        <AppLogo />
 
-<style scoped></style>
+        <div>
+            <nav class="navbar navbar-expand navbar-light">
+                <ul class="nav nav-bar-nav" v-for="(item, index) in navBarItems">
+                    <li class="nav-item" @click="activeLink = index">
+                        <a href="#" class="nav-link pb-5" :class="activeLink === index ? 'active' : ''">{{ item
+                        }}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</template>
+
+<style lang='scss' scoped>
+@use '../assets/scss/partials/variables' as *;
+
+header {
+    height: 120px;
+
+    li {
+        a {
+            text-transform: uppercase;
+
+            &.active {
+                color: $dc_primary;
+            }
+        }
+
+        & a.active {
+            border-bottom: solid 5px $dc_primary;
+        }
+    }
+}
+</style>

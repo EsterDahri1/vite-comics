@@ -33,10 +33,12 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <AppJumbo />
-  <AppBanner />
-  <AppFooter />
+  <div class="container">
+    <AppHeader />
+    <AppJumbo />
+    <AppBanner />
+    <AppFooter />
+  </div>
 </template>
 
 <style lang="scss">

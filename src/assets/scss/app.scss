@@ -1,6 +1,7 @@
 //Bootstrap
-@use'../../../node_modules/bootstrap/scss/bootstrap.scss'
+@use'../../../node_modules/bootstrap/scss/bootstrap.scss';
 
 /*Variables*/
+@use'../scss/partials/variables' as *;
 
 /*Common*/

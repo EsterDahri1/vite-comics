@@ -29,7 +29,7 @@ export default {
 .banner {
     background-color: $dc_primary;
     height: 150px;
-    color: $dc_light;
+    color: white;
 
     .col-2 {
         width: calc(100% / 10 * 2);

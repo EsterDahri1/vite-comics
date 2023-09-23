@@ -22,7 +22,7 @@ export default {
 @use '../assets/scss/partials/variables' as *;
 
 .jumbotron {
-    color: $dc_light;
+    color: white;
     height: 130px;
 }
 </style>

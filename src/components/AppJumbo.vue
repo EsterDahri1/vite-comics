@@ -9,8 +9,10 @@ export default {
 </script>
 
 <template>
-    <div class="container jumbotron d-flex justify-content-start align-items-center">
-        {{ message }}
+    <div class="bg-black">
+        <div class="container jumbotron d-flex justify-content-start align-items-center">
+            {{ message }}
+        </div>
     </div>
 </template>
 

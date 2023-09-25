@@ -11,7 +11,7 @@ export default {
 
     data() {
         return {
-            comics
+            comics: comics
         }
     }
 }
@@ -22,7 +22,7 @@ export default {
         <div class="bg-black">
             <div class="container jumbotron d-flex align-items-center justify-content-between">
                 <div class="row py-4">
-                    <AppComics />
+                    <AppComics v-for="comic in comics" :thumb="comic.thumb" :series="comic.series" />
                 </div>
                 <!-- <div class="col-2 h-100" v-for="comic in comics">
                     <img :src="comic.thumb" class="card-img-top">

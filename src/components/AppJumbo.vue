@@ -1,5 +1,6 @@
 <script>
 import comics from "../comics.js";
+import AppComics from "./AppComics.vue";
 export default {
     name: 'AppJumbo',
 
@@ -7,6 +8,10 @@ export default {
         return {
             comics
         }
+    },
+
+    components: {
+        AppComics
     }
 }
 </script>
@@ -15,18 +20,22 @@ export default {
     <div class="teen pt-5 d-flex flex-column justify-content-end">
         <div class="bg-black">
             <div class="container jumbotron d-flex align-items-center justify-content-between">
-                <div class="col-2 h-100">
-                    <img :src="comics.thumb" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="text-muted text-uppercase text-white">{{ comics.series }}</h4>
-                    </div>
+
+                <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 py-4">
+                    <AppComics :thumb="comic.thumb" :series="comic.series" v-for="comic in comics" />
                 </div>
+                <!-- <div class="col-2 h-100" v-for="comic in comics">
+                    <img :src="comic.thumb" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="text-muted text-uppercase text-white">{{ comic.series }}</h4>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../assets/scss/partials/variables' as *;
 
 .teen {

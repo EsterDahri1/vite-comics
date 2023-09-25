@@ -6,29 +6,36 @@ export default {
         return {
             services: [
                 {
-                    img: '../assets/img/buy-comics-digital-comics.png',
+                    img: 'buy-comics-digital-comics',
                     name: 'Digital comics'
                 },
                 {
-                    img: '../assets/img/buy-comics-merchandise.png',
+                    img: 'buy-comics-merchandise',
                     name: 'dc merchandise'
                 },
                 {
-                    img: '../assets/img/buy-comics-subscriptions.png',
+                    img: 'buy-comics-subscriptions',
                     name: 'subscription'
                 },
                 {
-                    img: '../assets/img/buy-comics-shop-locator.png',
+                    img: 'buy-comics-shop-locator',
                     name: 'comic shop locator'
                 },
                 {
-                    img: '../assets/img/buy-dc-power-visa.svg',
+                    img: 'buy-dc-power-visa',
                     name: 'dc power visa'
                 },
             ]
 
         }
+    },
+
+    methods: {
+        getImageUrl(img) {
+            return new URL(`./src/assets/${service.img}.png`, import.meta.url).href
+        }
     }
+
 }
 </script>
 
@@ -38,7 +45,7 @@ export default {
             <div class="row align-items-center justify-content-center">
                 <div class="col-2" v-for="service in services">
                     <div class="d-flex align-items-center">
-                        <img :src="service.img" alt="">
+                        <img :src="getImageUrl(img)" alt="">
                         <h5>
                             <a href="#" class="text-white text-decoration-none text-uppercase">
                                 {{ service.name }}

@@ -36,12 +36,29 @@ export default {
 
 <template>
     <div id="upperFooter">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="col-4">
-                <div class="row flex-wrap">
-                    <div class="col-2">
-
-                    </div>
+        <div class="container d-flex justify-content-between">
+            <div class="col-4 d-flex flex-wrap mt-4">
+                <div class="p-2">
+                    <h4 class="text-uppercase text-white">dc comics</h4>
+                    <ul class="list-unstyled p-0 fs-6">
+                        <li v-for="dcComicsLink in dcComicsLinks">{{ dcComicsLink }}</li>
+                    </ul>
+                    <h4 class="text-uppercase text-white">shop</h4>
+                    <ul class="list-unstyled p-0 fs-6">
+                        <li v-for="shopLink in shopLinks">{{ shopLink }}</li>
+                    </ul>
+                </div>
+                <div class="p-2">
+                    <h4 class="text-uppercase text-white">dc</h4>
+                    <ul class="list-unstyled p-0 fs-6">
+                        <li v-for="dcLink in dcLinks">{{ dcLink }}</li>
+                    </ul>
+                </div>
+                <div class="p-2">
+                    <h4 class="text-uppercase text-white">sites</h4>
+                    <ul class="list-unstyled p-0 fs-6">
+                        <li v-for="sitesLink in sitesLinks">{{ sitesLink }}</li>
+                    </ul>
                 </div>
             </div>
             <img src="../assets/img/dc-logo-bg.png" alt="" srcset="" class="mb-4">
@@ -66,6 +83,10 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: hidden;
+
+    li {
+        color: rgba(255, 255, 255, 0.57)
+    }
 }
 
 ;

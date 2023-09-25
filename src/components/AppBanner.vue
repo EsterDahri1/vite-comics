@@ -35,11 +35,11 @@ export default {
 
 <template>
     <div class="banner d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
+        <div class="container p-5">
+            <div class="row align-items-center justify-content-center g-1">
                 <div class="col-2" v-for="service in services">
                     <div class="d-flex align-items-center">
-                        <img :src="service.img" alt="">
+                        <img width="60" class="pe-3" :src="service.img" alt="">
                         <h5>
                             <a href="#" class="text-white text-decoration-none text-uppercase">
                                 {{ service.name }}

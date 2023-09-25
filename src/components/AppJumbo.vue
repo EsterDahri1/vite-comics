@@ -4,14 +4,15 @@ import AppComics from "./AppComics.vue";
 export default {
     name: 'AppJumbo',
 
+
+    components: {
+        AppComics
+    },
+
     data() {
         return {
             comics
         }
-    },
-
-    components: {
-        AppComics
     }
 }
 </script>
@@ -21,8 +22,8 @@ export default {
         <div class="bg-black">
             <div class="container jumbotron d-flex align-items-center justify-content-between">
 
-                <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 py-4">
-                    <AppComics :thumb="comic.thumb" :series="comic.series" v-for="comic in comics" />
+                <div class="row py-4">
+                    <AppComics />
                 </div>
                 <!-- <div class="col-2 h-100" v-for="comic in comics">
                     <img :src="comic.thumb" class="card-img-top">
@@ -30,6 +31,7 @@ export default {
                         <h4 class="text-muted text-uppercase text-white">{{ comic.series }}</h4>
                     </div>
                 </div> -->
+                <!-- :thumb="comic.thumb" :series="comic.series" v-for="comic in comics"  -->
             </div>
         </div>
     </div>

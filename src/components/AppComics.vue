@@ -4,15 +4,21 @@ export default {
     // props: ['thumb', 'price', 'series', 'type'],
     data() {
         return {
-            message: 'Hello AppComics'
+            // message: 'Hello AppComics'
         }
     }
 }
 </script>
 
 <template>
-    <div>
-        <h1>{{ message }}</h1>
+    <div class="card">
+        <!-- <h1>{{ message }}</h1> -->
+        <img width="70"
+            src="https://static.vecteezy.com/system/resources/previews/002/592/172/non_2x/smile-emoji-pop-art-line-style-icon-free-vector.jpg"
+            alt="" class="img-card-top">
+        <div class="card-body">
+            Testo del fumetto
+        </div>
     </div>
 </template>
 

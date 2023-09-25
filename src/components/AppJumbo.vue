@@ -21,7 +21,6 @@ export default {
     <div class="teen d-flex flex-column justify-content-end">
         <div class="bg-black">
             <div class="container jumbotron d-flex align-items-center justify-content-between">
-
                 <div class="row py-4">
                     <AppComics />
                 </div>

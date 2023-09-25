@@ -67,8 +67,9 @@ export default {
     <div id="lowerFooter" class="d-flex align-items-center">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="#" class="btn btn-outline-primary text-uppercase text-white rounded-0 fs-4 border-3">sign-up now!</a>
-            <div class="social">
-                <h4 class="text-uppercase text-primary">follow us</h4>
+            <div class="social d-flex align-items-center justify-content-center">
+                <h4 class="text-uppercase text-primary p-2 pt-2 m-0 text-center">follow us</h4>
+                <img v-for="social in socials" :src="social.img" class="text-white p-1" alt="">
             </div>
         </div>
     </div>

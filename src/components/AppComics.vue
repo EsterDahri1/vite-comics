@@ -16,11 +16,13 @@ export default {
 </script>
 
 <template>
-    <div class="card rounded-0">
-        <!-- <h1>{{ message }}</h1> -->
-        <img :src="thumb" alt="" class="img-card-top">
-        <div class="card-body">
-            <h4 class="text-uppercase text-white">{{ series }}</h4>
+    <div class="col-2">
+        <div class="card rounded-0">
+            <!-- <h1>{{ message }}</h1> -->
+            <img width='100' :src="thumb" alt="" class="img-card-top">
+            <div class="card-body">
+                <h4 class="text-uppercase text-white">{{ series }}</h4>
+            </div>
         </div>
     </div>
 </template>

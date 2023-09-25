@@ -20,17 +20,10 @@ export default {
 <template>
     <div class="teen d-flex flex-column justify-content-end">
         <div class="bg-black">
-            <div class="container jumbotron d-flex align-items-center justify-content-between">
+            <div class="container jumbotron d-flex align-items-center justify-content-between flex-wrap">
                 <div class="row py-4">
                     <AppComics v-for="comic in comics" :thumb="comic.thumb" :series="comic.series" />
                 </div>
-                <!-- <div class="col-2 h-100" v-for="comic in comics">
-                    <img :src="comic.thumb" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="text-muted text-uppercase text-white">{{ comic.series }}</h4>
-                    </div>
-                </div> -->
-                <!-- :thumb="comic.thumb" :series="comic.series" v-for="comic in comics"  -->
             </div>
         </div>
     </div>
@@ -49,6 +42,5 @@ export default {
 
 .jumbotron {
     color: white;
-    height: 500px;
 }
 </style>

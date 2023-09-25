@@ -19,8 +19,11 @@ export default {
 
 <template>
     <div class="teen d-flex flex-column justify-content-end">
-        <div class="wrapper d-flex flex-column align-items-center justify-content-center">
-            <div class="container jumbotron d-flex align-items-center justify-content-between flex-wrap">
+        <div class="wrapper d-flex flex-column align-items-center justify-content-center position-relative">
+            <div class="btnCurrent">
+                <a href="##" class="btn btn-primary rounded-0 text-uppercase px-5 fs-3 fw-bolder">current series</a>
+            </div>
+            <div class="container jumbotron d-flex align-items-center justify-content-between flex-wrap ">
                 <div class="row pt-4 pb-1">
                     <AppComics v-for="comic in comics" :thumb="comic.thumb" :series="comic.series" />
                 </div>
@@ -44,6 +47,12 @@ export default {
 
     .wrapper {
         background-color: $dc_dark;
+    }
+
+    .btnCurrent {
+        position: absolute;
+        top: -28px;
+        left: 350px;
     }
 }
 

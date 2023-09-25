@@ -1,9 +1,78 @@
 <script>
+export default {
+    data() {
+        return {
+            dcComicsLinks: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News'],
+            shopLinks: ['Shop DC', 'Shop DC Collectibles'],
+            dcLinks: ['Terms Of Use', 'Privacy policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Shop Help', 'Contact US'],
+            sitesLinks: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa'],
 
+            socials: [
+                {
+                    img: './src/assets/img/footer-facebook.png',
+                    href: '##'
+                },
+                {
+                    img: './src/assets/img/footer-twitter.png',
+                    href: '##'
+                },
+                {
+                    img: './src/assets/img/footer-youtube.png',
+                    href: '##'
+                },
+                {
+                    img: './src/assets/img/footer-pinterest.png',
+                    href: '##'
+                },
+                {
+                    img: './src/assets/img/footer-periscope.png',
+                    href: '##'
+                },
+            ]
+        }
+    }
+}
 </script>
 
-<template></template>
+<template>
+    <div id="upperFooter">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="col-4">
+                <div class="row flex-wrap">
+                    <div class="col-2">
+
+                    </div>
+                </div>
+            </div>
+            <img src="../assets/img/dc-logo-bg.png" alt="" srcset="" class="mb-4">
+        </div>
+    </div>
+    <div id="lowerFooter" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="btn btn-outline-primary text-uppercase text-white rounded-0 fs-4 border-3">sign-up now!</a>
+            <div class="social">
+                <h4 class="text-uppercase text-primary">follow us</h4>
+            </div>
+        </div>
+    </div>
+</template>
 
 <style lang="scss" scoped>
 @use'../assets/scss/partials/variables' as *;
+
+#upperFooter {
+    height: 400px;
+    background-image: url(../assets/img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+;
+
+#lowerFooter {
+    height: 100px;
+    background-color: $dc_dark;
+
+}
 </style>

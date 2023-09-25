@@ -40,7 +40,7 @@ export default {
                     <div class="d-flex align-items-center">
                         <img :src="service.img" alt="">
                         <h5>
-                            <a href="#" class="text-white text-decoration-none">
+                            <a href="#" class="text-white text-decoration-none text-uppercase">
                                 {{ service.name }}
                             </a>
                         </h5>

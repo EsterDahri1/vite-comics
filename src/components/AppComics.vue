@@ -17,10 +17,10 @@ export default {
 
 <template>
     <div class="col-2">
-        <div class="card rounded-0">
+        <div class="card rounded-0 border-0">
             <!-- <h1>{{ message }}</h1> -->
-            <img width='100' :src="thumb" alt="" class="img-card-top">
-            <div class="card-body">
+            <img width='100' :src="thumb" alt="" class="img-card-top mt-4">
+            <div class="card-body d-flex align-items-center justify-content-start p-0 pt-2">
                 <h4 class="text-uppercase text-white">{{ series }}</h4>
             </div>
         </div>
@@ -33,11 +33,12 @@ export default {
 .card {
     background-color: transparent;
 
+    img {
+        width: 190px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
 }
 </style>
 
-
-<!-- <img :src="prop.thumb" class="card-img-top">
-            <div class="card-body">
-                <h4 class="text-muted text-uppercase text-white">{{ prop.series }}</h4>
-            </div> -->
